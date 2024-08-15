@@ -15,6 +15,7 @@ function reverseString(str) {
 
   return reverseStrArr.join('');  // o(n)
 }
+
 function reverse2(str){
   return str.split('').reverse().join('');
 }
