@@ -2,6 +2,7 @@ alert('reverseString');
 
 // create a function that reverses a string - "My name is Megha Banerjee" then it should return
 //"eejrenaB ahgeM si eman yM"
+// new code 
 
 function reverseString(str) {
   if(!str || str.length<2){
