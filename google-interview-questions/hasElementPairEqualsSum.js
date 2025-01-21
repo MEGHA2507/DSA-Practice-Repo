@@ -19,16 +19,16 @@ function hasPairWithSum(arr, sum) {
 
 // Better
 function hasPairWithSum2(arr, sum) {
-    const mySet = new Set();
-    const len = arr.length;
-    for (let i = 0; i < len; i++) {
-        if (mySet.has(arr[i])) {
-            return true;
-        }
-        mySet.add(sum - arr[i]);
+  const mySet = new Set();
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    if (mySet.has(arr[i])) {
+      return true;
     }
-    return false;
+    mySet.add(sum - arr[i]); // [3,5,4,7,8,2]
+  }
+  return false;
 }
 
-console.log(hasPairWithSum([6, 4, 5, 2, 1, 7], 9))
-console.log(hasPairWithSum2([6, 4, 5, 2, 1, 7], 9))
+console.log(hasPairWithSum([6, 4, 5, 2, 1, 7], 9));
+console.log(hasPairWithSum2([6, 4, 5, 2, 1, 7], 9));
