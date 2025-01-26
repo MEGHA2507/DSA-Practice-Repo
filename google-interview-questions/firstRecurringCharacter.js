@@ -15,7 +15,7 @@ function firstRecurrCharacter(array) {
   let count = 0;
 
   for (let i = 0; i < array.length; i++) {
-    if (mapObj[array[i]]) {
+    if (mapObj[array[i]]  && mapObj[array[i]]!== undefined) {
       return array[i];
     } else {
       mapObj[array[i]] = count + 1;
@@ -28,3 +28,4 @@ function firstRecurrCharacter(array) {
 console.log(firstRecurrCharacter([2, 5, 1, 2, 3, 5, 1, 2, 4]));
 console.log(firstRecurrCharacter([2, 1, 1, 2, 3, 5, 1, 2, 4]));
 console.log(firstRecurrCharacter([2, 3, 4, 5]));
+console.log(firstRecurrCharacter([2, 5, 5, 2, 3, 5, 1, 2, 4]));

@@ -55,6 +55,41 @@ console.log(twoSum([1, 10], 11));
 // S: O(1)
 
 // step 8: optimizing the code solution 
+// find out what is causing the time complexity 
+// find out ways to either eleminate or merge the loops to reduce time complexity
 
+
+function optimizedTwoSum(array, sum){
+  if (array.length === 0 || array.length === 1) {
+    return null;
+  }
+  let mapObj ={};
+
+  for(let i=0; i<array.length; i++){
+    let currentMapValue = mapObj[array[i]];
+    
+    if(currentMapValue >=0){
+      
+      return [currentMapValue, i];
+    }else{
+      const ntf= sum - array[i];
+      mapObj[ntf] = i;
+    }
+  }
+  return null;
+}
+
+console.log('optimised code result')
+console.log(optimizedTwoSum([1, 3, 7, 9, 2], 11));
+console.log(optimizedTwoSum([1, 3, 7, 9, 2], 25));
+console.log(optimizedTwoSum([], 11));
+console.log(optimizedTwoSum([11], 11));
+console.log(optimizedTwoSum([1, 10], 11));
+
+
+// step 9: testing our optimal solution with other test cases & space complexity and time complexity
+
+//Time complexity : O(n)
+//Space complexity: O(n)
 
 
